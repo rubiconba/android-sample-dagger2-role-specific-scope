@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewBoardsItemRow"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_height="100dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textviewBoardsItemRowCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Category" />
+
+        <TextView
+            android:id="@+id/textviewBoardsItemRowTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewBoardsItemRowCategory"
+            tools:text="Topic #1" />
+
+        <ImageView
+            android:id="@+id/imageviewBoardsItemImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/colorButtonNormal"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageviewBoardsItemRowWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageviewBoardsItemImage"
+            app:srcCompat="@drawable/ic_error_white"
+            android:tint="@color/colorAccent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textviewBoardsItemRowErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="10sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageviewBoardsItemRowWarning"
+            app:layout_constraintEnd_toStartOf="@+id/imageviewBoardsItemRowWarning"
+            app:layout_constraintTop_toTopOf="@+id/imageviewBoardsItemRowWarning"
+            tools:text="This topic is hidden by Rubicon"
+            tools:ignore="SmallSp" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
+
