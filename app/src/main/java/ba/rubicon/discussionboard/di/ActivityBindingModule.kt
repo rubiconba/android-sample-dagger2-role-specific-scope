@@ -14,10 +14,18 @@ import dagger.android.ContributesAndroidInjector
 @Module
 interface ActivityBindingModule {
 
+    /**
+     * Binds dependencies consumed by UserBoardActivity
+     * @return UserBoardActivity
+     */
     @UserScope
     @ContributesAndroidInjector(modules = [UserBoardModule::class, UserModule::class])
     fun bindUserBoard(): UserBoardActivity
 
+    /**
+     * Binds dependencies consumed by AdminBoardActivity
+     * @return AdminBoardActivity
+     */
     @AdminScope
     @ContributesAndroidInjector(modules = [AdminBoardModule::class, AdminModule::class])
     fun bindAdminBoard(): AdminBoardActivity

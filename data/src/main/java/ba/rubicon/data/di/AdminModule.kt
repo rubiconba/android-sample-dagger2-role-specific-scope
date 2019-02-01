@@ -10,12 +10,21 @@ import dagger.Provides
 @Module
 class AdminModule {
 
+    /**
+     * Provides Admin instance of ITopicRepository.
+     * @return ITopicRepository
+     */
     @AdminScope
     @Provides
     fun provideTopicRepository(): ITopicRepository {
         return AdminTopicRepository()
     }
 
+    /**
+     * Provides Admin instance of LoadTopics UseCase.
+     * @param topicRepository ITopicRepository
+     * @return LoadTopics
+     */
     @AdminScope
     @Provides
     fun provideLoadTopicsUseCase(topicRepository: ITopicRepository): LoadTopics {

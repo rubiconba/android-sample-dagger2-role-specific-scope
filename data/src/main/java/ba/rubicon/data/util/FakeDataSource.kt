@@ -3,6 +3,11 @@ package ba.rubicon.data.util
 import ba.rubicon.domain.entity.Topic
 import ba.rubicon.domain.entity.TopicMetadata
 
+/**
+ * This class is used to simulate the data source. In order to keep
+ * the code as readable as possible, I've decided to simply mock all
+ * of the data source code.
+ */
 const val RUBICON_IMAGE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIUCqXlXMaBKzt_JspF9_Qmgqg7z4iK-jfSFuy2bObuZFN60Cg"
 fun loadUserTopics(): List<Topic> {
     val list = mutableListOf<Topic>()

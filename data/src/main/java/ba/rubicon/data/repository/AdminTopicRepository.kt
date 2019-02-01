@@ -4,6 +4,9 @@ import ba.rubicon.data.util.loadAdminTopics
 import ba.rubicon.domain.entity.Topic
 import ba.rubicon.domain.repository.ITopicRepository
 
+/**
+ * Admin instance of ITopicRepository
+ */
 class AdminTopicRepository : ITopicRepository {
     override fun loadTopics(): List<Topic> {
         return loadAdminTopics()
