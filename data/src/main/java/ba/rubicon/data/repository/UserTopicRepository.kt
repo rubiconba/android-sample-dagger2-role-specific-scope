@@ -5,7 +5,7 @@ import ba.rubicon.domain.entity.Topic
 import ba.rubicon.domain.repository.ITopicRepository
 
 /**
- * Admin instance of ITopicRepository
+ * User instance of ITopicRepository
  */
 class UserTopicRepository : ITopicRepository {
     override fun loadTopics(): List<Topic> {
